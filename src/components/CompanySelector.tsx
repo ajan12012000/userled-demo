@@ -125,7 +125,17 @@ const CompanySearchInput = ({
   );
 };
 
-export default function CompanySelector({ company1, setCompany1, company2, setCompany2 }: any) {
+export default function CompanySelector({ 
+    company1, 
+    setCompany1, 
+    company2, 
+    setCompany2 
+}: {
+  company1: Company | null
+  setCompany1: (company: Company | null) => void
+  company2: Company | null
+  setCompany2: (company: Company | null) => void
+}) {
   const router = useRouter();
   const bothCompaniesSelected = company1 && company2;
 
